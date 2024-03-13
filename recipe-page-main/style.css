@@ -1,0 +1,258 @@
+:root{
+    /* primary-clr */
+    --Nutmeg: hsl(14, 45%, 36%) ;
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+
+    /* seacodary/natural-clr */
+    --White: hsl(0, 0%, 100%);
+     --Rose-White: hsl(330, 100%, 98%); 
+     --Eggshell: hsl(30, 54%, 90%); 
+     --Light-Grey: hsl(30, 18%, 87%); 
+     --Wenge-Brown: hsl(30, 10%, 34%); 
+     --Dark-Charcoal: hsl(24, 5%, 18%);
+
+    --font-family: "Young Serif", serif;
+    --font-weight:550;
+
+    --font-family-seacond: "Outfit", sans-serif;
+    --font-weight-seacond: 500;
+
+
+}
+
+
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* genral styling */
+body{
+    font-family: var(--font-family-seacond); 
+}
+
+
+/* recipe main heading/styling */
+.omlette__head{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-seacond);
+    color: var(--Dark-Charcoal);
+    line-height: 1.5rem;
+    margin: 1rem; 
+}
+
+.recipe__info{
+    font-size: 0.6rem;
+    font-family: var(--font-family-seacond);
+    font-weight: var(--font-weight);
+    color: var(--Wenge-Brown);
+    margin: 0 1rem ;
+}
+
+
+/* its recipe prepration time /styling */
+.recipe__prepration-time{
+   margin: 1.5rem 1rem ;
+   line-height: 1.1rem;
+   font-family: var(--font-family-seacond);
+   font-size: 0.7rem;
+   font-weight: var(--font-weight-seacond);
+   background-color: var(--Rose-White);
+   padding:0.5rem ;
+   border-radius: 0.5rem;
+}
+
+.recipe__prepration-time h4{
+    color: var(--Dark-Raspberry);
+    margin-left: 1.4rem;
+}
+
+.recipe__prepration-time li::marker{
+  color: var(--Dark-Raspberry);
+}
+
+.recipe__prepration-time li{
+  font-size: 0.6rem;
+  padding-left: 10px;
+}
+
+.recipe__prepration-time ul{
+  color: var(--Wenge-Brown);
+  list-style-position: outside;
+}
+
+
+/* about ingredients info */
+.ingredients-info h3{
+  color: var(--Nutmeg);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  line-height: 0.5rem;
+ margin: 1rem ;
+}
+
+.ingredients-info ul{
+  line-height: 1.2rem;
+  font-size: 0.6rem;
+  font-weight: var(--font-weight);
+  color: var(--Wenge-Brown);
+  list-style-position: outside;
+}
+
+.ingredients-info li{
+  padding-left: 10px;
+}
+
+.ingredients-info li::marker{
+  color: var(--Nutmeg);
+}
+
+.instructions-info h3{
+  margin: 1rem;
+  line-height: 1.2rem;
+  color: var(--Nutmeg);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+}
+
+.instructions-info ol{
+  line-height: 1rem;
+    font-size: 0.6rem;
+    font-weight: var(--font-weight-seacond);
+    color: var(--Wenge-Brown);
+   margin-right: 1rem;
+   list-style-position: outside;
+}
+
+.instructions-info li{
+  padding-left: 10px;
+}
+
+.instructions-info li::marker{
+  color: var(--Nutmeg);
+  font-weight: var(--font-weight);
+  font-family: var(--font-family-seacond);
+}
+
+
+/* it's all about nutrition */
+.nutrition h3{
+  margin: 1rem;
+  color: var(--Nutmeg);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    line-height: 1.2rem;
+}
+
+.nutrition .nutrition-about{
+  margin: 1rem;
+  font-size: 0.6rem;
+  color: var(--Wenge-Brown);
+}
+
+.nutrition-info{
+  margin: 1.5rem 2rem;
+  line-height: 2rem;
+  color: var(--Wenge-Brown);
+  font-size: 0.6rem;
+}
+
+.nutrition-info .label{
+  margin-right: 5px;
+}
+
+
+.nutrition-info table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.nutrition-info td {
+  padding: 0 10px;
+}
+
+.nutrition-info .highlight {
+ color: var(--Nutmeg);
+ font-weight: var(--font-weight);
+}
+
+
+/* media query for rensponsive design */
+@media (min-width:500px){
+  .omelette__recipe{
+    margin: 0.9rem;
+      max-width: 400px;
+      background-color: var(--White);
+      border-radius: 5px;
+      padding: 10px;
+  }
+
+   img{
+    border-radius: 5px;
+  }
+
+  body{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--Eggshell);
+  }
+}
